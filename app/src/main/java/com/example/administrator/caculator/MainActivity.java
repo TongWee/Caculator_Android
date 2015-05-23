@@ -18,6 +18,7 @@ public class MainActivity extends Activity {
     private boolean new_input;
     private boolean clearflag;
     private String last_btn;
+    private boolean outrange;
     //控件
     private Button[] btnNum = new Button[11];
     private Button[] btnCommand = new Button[5];
@@ -34,6 +35,7 @@ public class MainActivity extends Activity {
     }
 
     private void clear() {
+        outrange=true;
         new_input = true;
         last_btn = "";
         last_command = "";
@@ -52,14 +54,20 @@ public class MainActivity extends Activity {
             String input_str = btn.getText().toString();
             last_btn = input_str;
             if (clearflag)
+            {
                 clear();
-            if (!input_str.equals(".")) {
+            }
+            if(text_result.getText().toString().startsWith("0")&&!text_result.getText().toString().startsWith("0.")&&!input_str.equals("."))
+                return;
+            if(text_result.getText().toString().length()>19)
+            {
+                Toast.makeText(getApplicationContext(), "超出最大位数20", Toast.LENGTH_LONG).show();
+                return;
+            }
+            if (!input_str.equals(".")) {//是数字
                 if (new_input)
                 {
-                    if(text_result.getText().toString().startsWith("0")&&input_str.equals("0"))
-                        m_input = "0";
-                    else
-                        m_input = m_input + input_str;
+                    m_input = m_input + input_str;
                     new_input = false;
                 }
             } else {
@@ -101,6 +109,7 @@ public class MainActivity extends Activity {
                 num1 = Double.parseDouble(text_result.getText().toString());
                 last_command = input_str;
                 new_input = true;
+                outrange = false;
                 m_input="";
                 last_btn = input_str;
             } else if (last_command != null) {//如果运算符是等号
@@ -130,7 +139,7 @@ public class MainActivity extends Activity {
                             //text_result.setText("Error");
                             result = 0;
                         } else {
-                            result = div(num1, num2, 5);
+                            result = div(num1, num2, 9);
                             text_result.setText(result + "");
                         }
                         last_command = "";
@@ -147,9 +156,7 @@ public class MainActivity extends Activity {
             } else
                 text_result.setText(temp);
         }
-
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
