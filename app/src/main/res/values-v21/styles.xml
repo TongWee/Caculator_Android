@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="android:Theme.Material.Light">
+    <style name="AppTheme" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:colorAccent">@color/color_Accent</item>
+        <item name="android:colorPrimary">@color/color_Primary</item>
+        <item name="android:colorPrimaryDark">@color/color_PrimaryDark</item>
+        <item name="android:textColorPrimary">@color/color_textColorPrimary</item>
+        <item name="android:windowBackground">@color/color_windowBackground</item>
+    </style>
+    <style name="style_text">
+        <item name="android:textSize">30sp</item>
+        <item name="android:buttonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+    <style name="style_one" parent="style_text">
+        <item name="android:background">@drawable/btn_one</item>
+    </style>
+    <style name="style_two" parent="style_text">
+        <item name="android:background">@drawable/btn_two</item>
+    </style>
+    <style name="style_three" parent="style_text">
+        <item name="android:background">@drawable/btn_three</item>
+    </style>
+    <style name="style_four" parent="style_text">
+        <item name="android:background">@drawable/btn_four</item>
+    </style>
+    <style name="style_five" parent="style_text">
+        <item name="android:background">@drawable/btn_five</item>
     </style>
 </resources>

@@ -4,78 +4,149 @@
     tools:context=".MainActivity"
     android:layout_gravity="center_horizontal"
     >
-        <GridLayout
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="5">
+        <TextView
+            android:id="@+id/text_result"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:rowCount="7"
-            android:padding="20dp"
-            android:columnCount="4"
-            android:orientation="horizontal"
-            >
-            <TextView
-                android:id="@+id/text_result"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:height="50dp"
-                android:textSize="30sp"
-                android:gravity="end"
-                android:layout_columnSpan="4"
-                />
-            <Button android:id="@+id/one"
-                android:text="1"
-                android:textSize="30sp"/>
-            <Button android:id="@+id/two"
-                android:text="2"
-                android:textSize="30sp"/>
-            <Button android:id="@+id/three"
-                android:text="3"
-                android:textSize="30sp"/>
-            <Button android:id="@+id/clear"
-                android:text="C"
-                android:textSize="30sp"/>
-            <Button android:id="@+id/four"
-                android:text="4"
-                android:textSize="30sp"/>
+            android:layout_height="200dp"
+            android:height="50dp"
+            android:textSize="40sp"
+            android:gravity="end"
+            android:background="@color/color_Primary"
+            android:textColor="@color/color_textColorPrimary"
+            />
+        <TableRow
+            style="@style/style_text"
+            android:background="@color/color_row_one"
+            android:layout_weight="1"
+            android:weightSum="4">
+            <Button
+                style="@style/style_one"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:id="@+id/one"
+                android:text="1"/>
+            <Button
+                style="@style/style_one"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:id="@+id/two"
+                android:text="2"/>
+            <Button
+                style="@style/style_one"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:id="@+id/three"
+                android:text="3"/>
+            <Button
+                style="@style/style_one"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:id="@+id/clear"
+                android:text="C"/>
+        </TableRow>
+        <TableRow android:background="@color/color_row_two"
+            android:layout_weight="1">
+            <Button
+                style="@style/style_two"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/four"
+                android:text="4"/>
             <Button android:id="@+id/five"
-                android:text="5"
-                android:textSize="30sp"/>
+                style="@style/style_two"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="5"/>
             <Button android:id="@+id/six"
-                android:text="6"
-                android:textSize="30sp"/>
+                style="@style/style_two"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="6"/>
             <Button android:id="@+id/devide"
-                android:text="/"
-                android:textSize="30sp"/>
+                style="@style/style_two"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="/"/>
+        </TableRow>
+        <TableRow android:background="@color/color_row_three"
+            android:layout_weight="1">
             <Button android:id="@+id/seven"
-                android:text="7"
-                android:textSize="30sp"/>
+                style="@style/style_three"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="7"/>
             <Button android:id="@+id/eight"
-                android:text="8"
-                android:textSize="30sp"/>
+                style="@style/style_three"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="8"/>
             <Button android:id="@+id/nine"
-                android:text="9"
-                android:textSize="30sp"/>
+                style="@style/style_three"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="9"/>
             <Button android:id="@+id/mutiply"
-                android:text="*"
-                android:textSize="30sp"/>
+                style="@style/style_three"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="*"/>
+        </TableRow>
+        <TableRow android:background="@color/color_row_four"
+            android:layout_weight="1"
+            android:weightSum="4">
             <Button android:id="@+id/zero"
+                style="@style/style_four"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="2"
                 android:text="0"
-                android:textSize="30sp"
-                android:layout_gravity="fill"
-                android:layout_columnSpan="2"/>
-            <Button android:id="@+id/point"
-                android:text="."
-                android:textSize="30sp"/>
-            <Button android:id="@+id/minus"
-                android:text="-"
-                android:textSize="30sp"/>
-            <Button android:id="@+id/equal"
-                android:text="="
-                android:textSize="30sp"
-                android:layout_gravity="fill"
-                android:layout_columnSpan="3"/>
-            <Button android:id="@+id/add"
-                android:text="+"
-                android:textSize="30sp"
                 />
-        </GridLayout>
+            <Button android:id="@+id/point"
+                android:layout_width="0dp"
+                style="@style/style_four"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="."/>
+            <Button android:id="@+id/minus"
+                android:layout_width="0dp"
+                style="@style/style_four"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="-"/>
+        </TableRow>
+        <TableRow android:layout_weight="1"
+            android:background="@color/color_row_five"
+            android:weightSum="4">
+            <Button android:id="@+id/equal"
+                android:layout_height="match_parent"
+                android:text="="
+                style="@style/style_five"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                />
+            <Button android:id="@+id/add"
+                style="@style/style_five"
+                android:text="+"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                />
+        </TableRow>
+    </TableLayout>
 </RelativeLayout>

@@ -3,4 +3,14 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <color name="color_Accent">#ffbababa</color>
+    <color name="color_Primary">#ff651aa9</color>
+    <color name="color_PrimaryDark">#ff631baa</color>
+    <color name="color_textColorPrimary">#fff0f0f0</color>
+    <color name="color_windowBackground">#fffbfbfd</color>
+    <color name="color_row_one">#ff7c22a0</color>
+    <color name="color_row_two">#ff8c1e95</color>
+    <color name="color_row_three">#ff961b8e</color>
+    <color name="color_row_four">#ffa01988</color>
+    <color name="color_row_five">#ffa81683</color>
 </resources>
