@@ -8,16 +8,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:weightSum="5">
-        <TextView
-            android:id="@+id/text_result"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:height="50dp"
-            android:textSize="40sp"
-            android:gravity="end"
-            android:background="@color/color_Primary"
-            android:textColor="@color/color_textColorPrimary"
-            />
+            android:background="@color/color_Primary">
+            <TextView
+                android:id="@+id/text_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="40sp"
+                android:gravity="end"
+                android:background="@color/color_Primary"
+                android:textColor="@color/color_textColorPrimary"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
         <TableRow
             style="@style/style_text"
             android:background="@color/color_row_one"
